@@ -10,4 +10,7 @@ Get event Top10 tracker bot
 node main.js --eventID=${eventID}
 ```
 
+## Resault
+
+![](./img/01.png)
 <!-- No. ID sumpoints diff-pre-points diff-sort -->
