@@ -6,12 +6,12 @@ const argv = yargs(hideBin(process.argv)).argv;
 
 const { getCurrentDataTable } = require("./lib/apis.js");
 
-async function main() {
+function main() {
     if (argv.eventID) {
-        const data = await getCurrentDataTable(argv.eventID);
+        getCurrentDataTable(argv.eventID);
     } else { 
         console.log("Tell the Info with eventID");
     }
 }
 
-main();
+setInterval(main, 60000);
