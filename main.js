@@ -14,4 +14,4 @@ function main() {
     }
 }
 
-setInterval(main, 60000);
+setInterval(main, 3600000);
