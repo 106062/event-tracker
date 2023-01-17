@@ -1,10 +1,17 @@
 "use strict";
 
-const { getCurrentBoard } = require("./lib/apis.js")
+const yargs = require("yargs/yargs");
+const { hideBin } = require('yargs/helpers');
+const argv = yargs(hideBin(process.argv)).argv;
+
+const { getCurrentDataTable } = require("./lib/apis.js");
 
 async function main() {
-    const data = await getCurrentBoard();
-    console.log(data);
+    if (argv.eventID) {
+        const data = await getCurrentDataTable(argv.eventID);
+    } else { 
+        console.log("Tell the Info with eventID");
+    }
 }
 
 main();

@@ -6,5 +6,8 @@ Get event Top10 tracker bot
 <!-- ${server}: {"0": "jp"}, {"1": "en"}, {"2": "tw"}, {"3": "cn"}, {"4": "kr"} -->
 <!-- ${eventID} -->
 
+``` cmd
+node main.js --eventID=${eventID}
+```
 
 <!-- No. ID sumpoints diff-pre-points diff-sort -->
