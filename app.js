@@ -38,7 +38,6 @@ client.on("message", msg => {
                         }
                         msg.channel.send(data);
                         setInterval(getCurrentDataTable, 3600000);
-                        
                     }
                     break;
                 case "stop":
