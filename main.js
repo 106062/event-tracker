@@ -4,14 +4,24 @@ const yargs = require("yargs/yargs");
 const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
 
-const { getCurrentDataTable } = require("./lib/apis.js");
+const { getCurrentDataTable, getDiffDataTable } = require("./lib/apis.js");
 
-function main() {
+let olderInfo = [];
+
+async function main() {
     if (argv.eventID) {
-        getCurrentDataTable(argv.eventID);
-    } else { 
+        let tmp = await getCurrentDataTable(argv.eventID);
+        if (olderInfo.length !== 0) {
+            getDiffDataTable(olderInfo, tmp);
+        } else { 
+            for (let i = 0; i < tmp.length; i++) {
+                olderInfo[i] = tmp[i];
+            }
+        }     
+    } else {
         console.log("Tell the Info with eventID");
     }
 }
 
 setInterval(main, 3600000);
+main();
