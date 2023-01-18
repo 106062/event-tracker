@@ -13,11 +13,10 @@ async function main() {
         let tmp = await getCurrentDataTable(argv.eventID);
         if (olderInfo.length !== 0) {
             getDiffDataTable(olderInfo, tmp);
-        } else { 
-            for (let i = 0; i < tmp.length; i++) {
-                olderInfo[i] = tmp[i];
-            }
-        }     
+            olderInfo = tmp;
+        } else {
+            olderInfo = tmp;
+        }
     } else {
         console.log("Tell the Info with eventID");
     }
