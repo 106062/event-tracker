@@ -19,6 +19,7 @@ async function main() {
         }
     } else {
         console.log("Tell the Info with eventID");
+        return -1;
     }
 }
 
