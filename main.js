@@ -3,6 +3,7 @@
 const yargs = require("yargs/yargs");
 const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
+let CronJob = require('cron').CronJob;
 
 const { getCurrentDataTable, getDiffDataTable } = require("./lib/apis.js");
 
@@ -21,5 +22,9 @@ async function main() {
     }
 }
 
-setInterval(main, 3600000);
-main();
+//* */90 * * * * 90分速
+let job = new CronJob('0 * * * * *', function () { 
+    main();
+}, null, true, 'Asia/Tokyo');
+
+job.start();
