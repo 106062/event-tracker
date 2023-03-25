@@ -25,7 +25,7 @@ async function main() {
 main();
 
 //* */90 * * * * 90分速
-let job = new CronJob('0 * * * * *', function () { 
+let job = new CronJob('0 0 * * * *', function () { 
     main();
 }, null, true, 'Asia/Tokyo');
 
