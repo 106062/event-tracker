@@ -5,7 +5,7 @@ const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
 let CronJob = require('cron').CronJob;
 
-const { getCurrentDataTable, getDiffDataTable } = require("./lib/apis.js");
+const { getCurrentDataTable, getDiffDataTable, getBoardTable } = require("./lib/apis.js");
 
 let olderInfo = [];
 
@@ -16,6 +16,7 @@ async function main() {
             getDiffDataTable(olderInfo, tmp);
         }
         olderInfo = tmp;
+        await getBoardTable(argv.eventID);
     } else {
         console.log("Tell the Info with eventID");
         return -1;
