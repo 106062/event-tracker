@@ -12,5 +12,5 @@ node main.js --eventID=${eventID}
 
 ## Resault
 
-![](./img/01.png)
+![](./img/02.png)
 <!-- No. ID sumpoints diff-pre-points diff-sort -->
