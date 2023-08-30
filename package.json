@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js --eventID=233"
+    "start": "node main.js --eventID=234"
   },
   "repository": {
     "type": "git",
