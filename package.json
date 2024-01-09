@@ -7,8 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js --eventID=245"
+    "test": "echo \"Error: no test specified\" && exit 1 update 240110",
+    "start": "node main.js --eventID=246"
   },
   "repository": {
     "type": "git",
